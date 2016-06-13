@@ -1,0 +1,47 @@
+[
+  {
+    "name": "registry",
+    "image": "registry:2",
+    "memory": 500,
+    "essential": true,
+    "portMappings": [
+      {
+        "hostPort": 5000,
+        "containerPort": 5000,
+        "protocol": "tcp"
+      }
+    ],
+    "environment": [
+      {
+        "name": "REGISTRY_STORAGE",
+        "value": "s3"
+      },
+      {
+        "name": "REGISTRY_STORAGE_S3_BUCKET",
+        "value": "${s3_bucket}"
+      },
+      {
+        "name": "REGISTRY_STORAGE_S3_ROOTDIRECTORY",
+        "value": "/registry"
+      },
+      {
+        "name": "REGISTRY_STORAGE_S3_ACCESSKEY",
+        "value": "${aws_key}"
+      },
+      {
+        "name": "REGISTRY_STORAGE_S3_SECRETKEY",
+        "value": "${aws_secret}"
+      },
+      {
+        "name": "REGISTRY_STORAGE_S3_REGION",
+        "value": "${aws_region}"
+      }
+    ],
+    "mountPoints": null,
+    "volumesFrom": null,
+    "extraHosts": null,
+    "logConfiguration": null,
+    "ulimits": null,
+    "dockerLabels": null
+  }
+]

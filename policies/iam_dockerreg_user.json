@@ -1,0 +1,15 @@
+{
+  "Statement": [
+    {
+      "Resource": [
+        "arn:aws:s3:::${s3_id}/*",
+        "arn:aws:s3:::${s3_id}"
+      ],
+      "Action": [
+        "s3:*"
+      ],
+      "Effect": "Allow"
+    }
+  ],
+  "Version": "2012-10-17"
+}
