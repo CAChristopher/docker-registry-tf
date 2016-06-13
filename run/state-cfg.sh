@@ -4,7 +4,7 @@ if [[ $# -eq 1 ]]; then
     DATACENTER=$1
     terraform remote config \
     -backend=s3 \
-    -backend-config="bucket=oct-terraform" \
+    -backend-config="bucket=<bucket>" \
     -backend-config="key=datacenter/${DATACENTER}/docker-registry-tf/terraform.tfstate" \
     -backend-config="region=us-west-2"
   else

@@ -5,7 +5,7 @@ variable "aws_region" {
 variable "key_name" {
   description = "SSH key name in your AWS account for AWS instances."
   default = {
-    "us-west-2" = "ecs"
+    "us-west-2" = ""
   }
 }
 
@@ -19,39 +19,39 @@ variable "availability_zones" {
 variable "subnet_ids" {
   description = "Comma separated list of subnet ids, must match availability zones"
   default = {
-    "us-west-2" = "subnet-1d965a6b,subnet-34bb1050"
+    "us-west-2" = ""
   }
 }
 
 variable "security_group_ids" {
   description = "Comma separated list of security group ids"
   default = {
-    "us-west-2" = "sg-e3013b84"
+    "us-west-2" = ""
   }
 }
 
 variable "ecs_role" {
   description = "ecs role for connecting agent to elb"
   default = {
-    "us-west-2" = "ecsServiceRole"
+    "us-west-2" = ""
   }
 }
 
 variable "s3_bucket_name" {
   description = "s3 bucket for images"
   default = {
-    "us-west-2" = "ds1-docker-registry"
+    "us-west-2" = "mah-s3-bucket-murica"
   }
 }
 
 variable "dns_zone" {
   default = {
-    "us-west-2" = "Z3U6R06CPJRWSM"
+    "us-west-2" = ""
   }
 }
 
 variable "dns_name" {
   default = {
-    "us-west-2" = "registry.octanner.io"
+    "us-west-2" = ""
   }
 }
