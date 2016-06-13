@@ -1,4 +1,4 @@
-# Private Docker Registry for DS0
+# Private Docker Registry 
 
 ## Terraform
 This is a terraform template and requires to be run by terraform plan/apply.
